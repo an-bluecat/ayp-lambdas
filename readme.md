@@ -20,9 +20,13 @@ Run python main.py to start the local server.
 
 ## Deployment
 Deploy using Google Cloud Functions:
-
+```gcloud auth login && gcloud config set project all-your-perks```
 ```gcloud functions deploy process_perks --runtime python39 --trigger-http --allow-unauthenticated --entry-point=process_perks ```
+```gcloud functions deploy query_offers --runtime python39 --trigger-http --allow-unauthenticated --entry-point=query_offers```
 
+## Observability
 
+- view lambda function usage and logs on GCP console
 
+- view database entries on firebase FireStore
 
